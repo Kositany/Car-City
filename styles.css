@@ -1,0 +1,288 @@
+:root {
+    --primary: #cc2936;
+    --background: #ffffffd0;
+    --muted: #f4f4f5;
+    --text: #18181b;
+    --text-muted: #71717a;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.5;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  /* Header with enhanced glass effect */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(255, 255, 255, 0.651);
+    -webkit-backdrop-filter: blur(20px) saturate(1200%);
+    backdrop-filter: blur(12px) saturate(180%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  }
+
+  .header-content {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    height: 64px;
+    display: flex;
+    /*-webkit-backdrop-filter: blur(12px) saturate(180%);*/
+    border-radius: 100px;
+    width: auto;
+  }
+  .logo:hover{
+    height: 75px;
+    width: 85px;
+    display: flex;
+    border-radius: 100px;
+  }
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .phone-number {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .contact-button {
+    background: var(--primary);
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s;
+  }
+
+  .contact-button:hover {
+    background-color: #b32530;
+    transition: 0.5s ease-in;
+  }
+
+  /* Hero Section */
+  .hero {
+    position: relative;
+    height: 600px;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url("car\ city\ background.png");
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.6);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 10;
+    color: white;
+    max-width: 42rem;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 1.25rem;
+    opacity: 0.9;
+  }
+
+  /* Featured Cars with Horizontal Scroll */
+  .featured {
+    padding: 5rem 0;
+    background: var(--muted);
+  }
+
+  .featured h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .cars-scroll {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 1rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+
+  .cars-scroll::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+  }
+
+  .cars-container {
+    display: inline-flex;
+    gap: 2rem;
+    padding: 0.5rem;
+  }
+
+  .car-card {
+    flex: 0 0 auto;
+    width: 350px;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    transition: transform 0.3s;
+  }
+
+  .car-card:hover {
+    transform: translateY(-7px);
+  }
+
+  .car-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .car-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem 1.5rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: white;
+  }
+
+  .car-overlay h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .car-overlay p {
+    opacity: 0.9;
+    white-space: normal;
+  }
+
+  /* Contact Section with Grid */
+  .contact {
+    padding: 5rem 0;
+    background: var(--background);
+  }
+
+  .contact h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .contact-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    height: 100%;
+  }
+
+  .contact-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+  }
+
+  .contact-info {
+    display: flex;
+    gap: 0rem;
+    margin-bottom: 1rem;
+  }
+
+  .contact-icon {
+    color: var(--primary);
+    flex-shrink: 0;
+  }
+  .location{
+    gap: 0.5rem;
+    font-weight:500;
+  }
+.proprietor-name{
+  font-weight: 500;
+}
+a,.proprietor-name-phone{
+  color: #18181b;
+  text-decoration: none;
+}
+  .separator {
+    height: 1px;
+    background: #e4e4e7;
+    margin: 1rem 0;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .phone-number {
+      display: none;
+    }
+  }
+  .featured-link{
+    color:#cc2936
+  }
+  .car-city{
+    color:#cc2936;
+  }
+  .car-city:hover{
+    color:#b32530;
+  }
+ /* .featured-button{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align:justify;
+    min-height: 40px;
+    max-height: 55px;
+    margin-left: 50%;
+  }
+    */
