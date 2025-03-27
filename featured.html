@@ -1,220 +1,523 @@
-<!---<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Featured Vehicles - Car City Limited</title>
     <link rel="stylesheet" href="styles.css">
-    <title>Featured Vehicles</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="container header-content">
-            <a href="index.html">
-                <img src="car city logo.jpg" alt="Car City Limited" class="logo">
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="car city logo.jpg" alt="Car City Limited Logo" class="logo">
+            </div>
+            <div class="nav-contact">
+                <nav class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="featured.html" class="active">Featured Vehicles</a>
+                </nav>
+                <a href="tel:+254204401407" class="contact-btn">
+                    <i class="fas fa-phone"></i> +254 204 401 407
                 </a>
-        <div class="header-right">
-            <a href="tel:+254204401407" class="phone-number">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-            </svg>
-            +254 204 401 407
-            </a>
-            <a href="tel:+254204401407">
-            <button class="contact-button">Contact Us</button>
-            </a>
-        </div>
+            </div>
         </div>
     </header>
-    <section class="featured">
-        <div class="container">
-        <a href="featured.html" class="featured-link">
-        <h2>SUVs</h2>
-        </a>
-        <div class="cars-scroll">
-            <div class="cars-container">
-            <div class="car-card">
-                <img src="prado tx.jpg" alt="Toyota Prado TX" class="car-image">
-                <div class="car-overlay">
-                <h3>Toyota Prado TX</h3>
-                <p>Luxury SUV combining comfort and capability</p>
-                </div>
-            </div>
-            <div class="car-card">
-                <img src="truckhawk.jpg" alt="Jeep Trackhawk" class="car-image">
-                <div class="car-overlay">
-                <h3>Jeep Trackhawk</h3>
-                <p>High-performance SUV with unmatched power</p>
-                </div>
-            </div>
-            <div class="car-card">
-                <img src="https://images.unsplash.com/photo-1615908397724-6dc711db34a7" alt="BMW X5" class="car-image">
-                <div class="car-overlay">
-            <h3>BMW X5</h3>
-            <p>The ultimate driving machine in SUV form</p>
-                </div>
-        </div>
-        <div class="car-card">
-            <img src="https://images.unsplash.com/photo-1615908397724-6dc711db34a7" alt="BMW X5" class="car-image">
-            <div class="car-overlay">
-        <h3>BMW X5</h3>
-        <p>The ultimate driving machine in SUV form</p>
-            </div>
-            </div>
-        </div>
+
+    <!-- Hero Section -->
+    <section class="hero featured-hero">
+        <div class="hero-content">
+            <h1>Our Vehicle Collection</h1>
+            <p>Explore our diverse range of premium vehicles to find your perfect match.
+                From luxury SUVs to efficient small cars, we have something for everyone.</p>
         </div>
     </section>
-    <section class="featured">
-        <div class="container">
-        <a href="featured.html" class="featured-link">
-        <h2>Saloon cars</h2>
-        </a>
-        <div class="cars-scroll">
-            <div class="cars-container">
-            <div class="car-card">
-                <img src="prado tx.jpg" alt="Toyota Prado TX" class="car-image">
-                <div class="car-overlay">
-                <h3>Toyota Prado TX</h3>
-                <p>Luxury SUV combining comfort and capability</p>
-                </div>
-            </div>
-            <div class="car-card">
-                <img src="truckhawk.jpg" alt="Jeep Trackhawk" class="car-image">
-                <div class="car-overlay">
-                <h3>Jeep Trackhawk</h3>
-                <p>High-performance SUV with unmatched power</p>
-                </div>
-            </div>
-            <div class="car-card">
-                <img src="https://images.unsplash.com/photo-1615908397724-6dc711db34a7" alt="BMW X5" class="car-image">
-                <div class="car-overlay">
-            <h3>BMW X5</h3>
-            <p>The ultimate driving machine in SUV form</p>
-                </div>
+
+    <!-- Sidebar Menu Toggle Button (Mobile) -->
+    <button id="sidebar-toggle" class="sidebar-toggle">
+        <i class="fas fa-bars"></i>
+    </button>
+    
+    <!-- Sidebar Menu -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h3>Vehicle Categories</h3>
+            <button class="sidebar-close">
+                <i class="fas fa-times"></i>
+            </button>
         </div>
-        <div class="car-card">
-            <img src="https://images.unsplash.com/photo-1615908397724-6dc711db34a7" alt="BMW X5" class="car-image">
-            <div class="car-overlay">
-        <h3>BMW X5</h3>
-        <p>The ultimate driving machine in SUV form</p>
-            </div>
-            </div>
+        <div class="sidebar-content">
+            <a href="#suvs" class="sidebar-link active">
+                <i class="fas fa-truck-monster"></i>
+                <span>Luxury SUVs</span>
+            </a>
+            <a href="#pickups" class="sidebar-link">
+                <i class="fas fa-truck-pickup"></i>
+                <span>Pickup Trucks</span>
+            </a>
+            <a href="#saloons" class="sidebar-link">
+                <i class="fas fa-car"></i>
+                <span>Saloon Cars</span>
+            </a>
+            <a href="#small-cars" class="sidebar-link">
+                <i class="fas fa-car-side"></i>
+                <span>Small Cars</span>
+            </a>
+            <a href="index.html" class="sidebar-link">
+                <i class="fas fa-home"></i>
+                <span>Back to Home</span>
+            </a>
         </div>
-        </div>
-    </section>
-    <section class="featured">
-        <div class="container">
-        <a href="featured.html" class="featured-link">
-        <h2>Featured Vehicles</h2>
-        </a>
-        <div class="cars-scroll">
-            <div class="cars-container">
-            <div class="car-card">
-                <img src="prado tx.jpg" alt="Toyota Prado TX" class="car-image">
-                <div class="car-overlay">
-                <h3>Toyota Prado TX</h3>
-                <p>Luxury SUV combining comfort and capability</p>
-                </div>
-            </div>
-            <div class="car-card">
-                <img src="truckhawk.jpg" alt="Jeep Trackhawk" class="car-image">
-                <div class="car-overlay">
-                <h3>Jeep Trackhawk</h3>
-                <p>High-performance SUV with unmatched power</p>
-                </div>
-            </div>
-            <div class="car-card">
-                <img src="https://images.unsplash.com/photo-1615908397724-6dc711db34a7" alt="BMW X5" class="car-image">
-                <div class="car-overlay">
-            <h3>BMW X5</h3>
-            <p>The ultimate driving machine in SUV form</p>
-                </div>
-        </div>
-        <div class="car-card">
-            <img src="https://images.unsplash.com/photo-1615908397724-6dc711db34a7" alt="BMW X5" class="car-image">
-            <div class="car-overlay">
-        <h3>BMW X5</h3>
-        <p>The ultimate driving machine in SUV form</p>
-            </div>
+    </div>
+    
+    <!-- Overlay for sidebar -->
+    <div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+    <!-- SUVs Section -->
+    <section id="suvs" class="vehicle-category">
+        <div class="section-title">
+            <h2>Luxury SUVs</h2>
+            <div class="scroll-buttons">
+                <button class="scroll-btn scroll-left"><i class="fas fa-chevron-left"></i></button>
+                <button class="scroll-btn scroll-right"><i class="fas fa-chevron-right"></i></button>
             </div>
         </div>
-        </div>
-    </section>
-    <section class="featured">
-        <div class="container">
-        <a href="featured.html" class="featured-link">
-        <h2>Featured Vehicles</h2>
-        </a>
-        <div class="cars-scroll">
-            <div class="cars-container">
+        
+        <div class="featured-container">
             <div class="car-card">
-                <img src="prado tx.jpg" alt="Toyota Prado TX" class="car-image">
-                <div class="car-overlay">
-                <h3>Toyota Prado TX</h3>
-                <p>Luxury SUV combining comfort and capability</p>
+                <div class="car-image">
+                    <img src="https://images.unsplash.com/photo-1550355291-bbee04a92027" alt="Range Rover Sport">
+                    <div class="car-overlay">
+                        <h3>Range Rover Sport</h3>
+                        <p>Refined luxury and off-road capability</p>
+                    </div>
+                    <div class="car-details">
+                        <h3>Range Rover Sport</h3>
+                        <ul>
+                            <li>3.0L P400 Engine</li>
+                            <li>Terrain Response System</li>
+                            <li>Premium Meridian Sound System</li>
+                            <li>Air Suspension</li>
+                            <li>Panoramic Roof</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+            
             <div class="car-card">
-                <img src="truckhawk.jpg" alt="Jeep Trackhawk" class="car-image">
-                <div class="car-overlay">
-                <h3>Jeep Trackhawk</h3>
-                <p>High-performance SUV with unmatched power</p>
+                <div class="car-image">
+                    <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8" alt="Mercedes GLE">
+                    <div class="car-overlay">
+                        <h3>Mercedes GLE</h3>
+                        <p>Luxury and technology perfectly balanced</p>
+                    </div>
+                    <div class="car-details">
+                        <h3>Mercedes GLE</h3>
+                        <ul>
+                            <li>3.0L Inline-6 Engine</li>
+                            <li>MBUX Infotainment System</li>
+                            <li>Active Suspension</li>
+                            <li>Premium Burmester Sound</li>
+                            <li>64-Color Ambient Lighting</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+            
             <div class="car-card">
-                <img src="https://images.unsplash.com/photo-1615908397724-6dc711db34a7" alt="BMW X5" class="car-image">
-                <div class="car-overlay">
-            <h3>BMW X5</h3>
-            <p>The ultimate driving machine in SUV form</p>
-                </div>
-        </div>
-        <div class="car-card">
-            <img src="https://images.unsplash.com/photo-1615908397724-6dc711db34a7" alt="BMW X5" class="car-image">
-            <div class="car-overlay">
-        <h3>BMW X5</h3>
-        <p>The ultimate driving machine in SUV form</p>
-            </div>
-            </div>
-        </div>
-        </div>
-    </section>
-    <section class="featured">
-        <div class="container">
-        <a href="featured.html" class="featured-link">
-        <h2>Featured Vehicles</h2>
-        </a>
-        <div class="cars-scroll">
-            <div class="cars-container">
-            <div class="car-card">
-                <img src="prado tx.jpg" alt="Toyota Prado TX" class="car-image">
-                <div class="car-overlay">
-                <h3>Toyota Prado TX</h3>
-                <p>Luxury SUV combining comfort and capability</p>
+                <div class="car-image">
+                    <img src="https://images.unsplash.com/photo-1568987564215-b4fd8fdc986b" alt="Audi Q7">
+                    <div class="car-overlay">
+                        <h3>Audi Q7</h3>
+                        <p>Sophisticated technology and elegant design</p>
+                    </div>
+                    <div class="car-details">
+                        <h3>Audi Q7</h3>
+                        <ul>
+                            <li>3.0L TFSI V6 Engine</li>
+                            <li>Quattro All-Wheel Drive</li>
+                            <li>Virtual Cockpit Plus</li>
+                            <li>Bang & Olufsen 3D Sound</li>
+                            <li>Adaptive Air Suspension</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+            
             <div class="car-card">
-                <img src="truckhawk.jpg" alt="Jeep Trackhawk" class="car-image">
-                <div class="car-overlay">
-                <h3>Jeep Trackhawk</h3>
-                <p>High-performance SUV with unmatched power</p>
+                <div class="car-image">
+                    <img src="https://images.unsplash.com/photo-1563720223185-11003d516935" alt="Volvo XC90">
+                    <div class="car-overlay">
+                        <h3>Volvo XC90</h3>
+                        <p>Scandinavian luxury and advanced safety</p>
+                    </div>
+                    <div class="car-details">
+                        <h3>Volvo XC90</h3>
+                        <ul>
+                            <li>2.0L Supercharged & Turbocharged Engine</li>
+                            <li>Pilot Assist System</li>
+                            <li>Bowers & Wilkins Audio</li>
+                            <li>Crystal Gear Selector</li>
+                            <li>Advanced Air Purifier</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="car-card">
-                <img src="https://images.unsplash.com/photo-1615908397724-6dc711db34a7" alt="BMW X5" class="car-image">
-                <div class="car-overlay">
-            <h3>BMW X5</h3>
-            <p>The ultimate driving machine in SUV form</p>
-                </div>
-        </div>
-        <div class="car-card">
-            <img src="https://images.unsplash.com/photo-1615908397724-6dc711db34a7" alt="BMW X5" class="car-image">
-            <div class="car-overlay">
-        <h3>BMW X5</h3>
-        <p>The ultimate driving machine in SUV form</p>
-            </div>
-            </div>
-        </div>
         </div>
     </section>
+
+    <!-- Pickup Trucks Section -->
+    <section id="pickups" class="vehicle-category">
+        <div class="section-title">
+            <h2>Pickup Trucks</h2>
+            <div class="scroll-buttons">
+                <button class="scroll-btn scroll-left"><i class="fas fa-chevron-left"></i></button>
+                <button class="scroll-btn scroll-right"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+        
+        <div class="featured-container">
+            <div class="car-card">
+                <div class="car-image">
+                    <img src="https://images.unsplash.com/photo-1613214535042-47d3aeefb420" alt="Toyota Hilux">
+                    <div class="car-overlay">
+                        <h3>Toyota Hilux</h3>
+                        <p>Legendary reliability and versatility</p>
+                    </div>
+                    <div class="car-details">
+                        <h3>Toyota Hilux</h3>
+                        <ul>
+                            <li>2.8L Turbo Diesel Engine</li>
+                            <li>Robust 4x4 System</li>
+                            <li>3,500kg Towing Capacity</li>
+                            <li>Toyota Safety Sense</li>
+                            <li>Smart Cargo System</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="car-card">
+                <div class="car-image">
+                    <img src="https://images.unsplash.com/photo-1599269571932-addec9e13226" alt="Ford Ranger">
+                    <div class="car-overlay">
+                        <h3>Ford Ranger</h3>
+                        <p>Powerful performance with smart technology</p>
+                    </div>
+                    <div class="car-details">
+                        <h3>Ford Ranger</h3>
+                        <ul>
+                            <li>2.0L Bi-Turbo Diesel Engine</li>
+                            <li>10-Speed Automatic Transmission</li>
+                            <li>SYNC 4 Infotainment System</li>
+                            <li>FordPass Connect</li>
+                            <li>Zone Lighting System</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="car-card">
+                <div class="car-image">
+                    <img src="https://images.unsplash.com/photo-1609518336477-5ab6249c7f43" alt="Isuzu D-Max">
+                    <div class="car-overlay">
+                        <h3>Isuzu D-Max</h3>
+                        <p>Tough and dependable workhorse</p>
+                    </div>
+                    <div class="car-details">
+                        <h3>Isuzu D-Max</h3>
+                        <ul>
+                            <li>3.0L Turbo Diesel Engine</li>
+                            <li>Heavy-Duty Suspension</li>
+                            <li>Advanced Driver Assistance</li>
+                            <li>Terrain Command 4WD</li>
+                            <li>Wading Depth of 800mm</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Saloon Cars Section -->
+    <section id="saloons" class="vehicle-category">
+        <div class="section-title">
+            <h2>Saloon Cars</h2>
+            <div class="scroll-buttons">
+                <button class="scroll-btn scroll-left"><i class="fas fa-chevron-left"></i></button>
+                <button class="scroll-btn scroll-right"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+        
+        <div class="featured-container">
+            <div class="car-card">
+                <div class="car-image">
+                    <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738" alt="Mercedes C-Class">
+                    <div class="car-overlay">
+                        <h3>Mercedes C-Class</h3>
+                        <p>Refined luxury with performance</p>
+                    </div>
+                    <div class="car-details">
+                        <h3>Mercedes C-Class</h3>
+                        <ul>
+                            <li>2.0L Turbocharged Engine</li>
+                            <li>9G-TRONIC Transmission</li>
+                            <li>MBUX with Augmented Reality</li>
+                            <li>Burmester 3D Surround Sound</li>
+                            <li>Digital Light Headlamps</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="car-card">
+                <div class="car-image">
+                    <img src="https://images.unsplash.com/photo-1580274455191-1c62238fa333" alt="BMW 5 Series">
+                    <div class="car-overlay">
+                        <h3>BMW 5 Series</h3>
+                        <p>Business class with a sporting edge</p>
+                    </div>
+                    <div class="car-details">
+                        <h3>BMW 5 Series</h3>
+                        <ul>
+                            <li>3.0L TwinPower Turbo Engine</li>
+                            <li>8-Speed Sport Automatic</li>
+                            <li>BMW Live Cockpit Professional</li>
+                            <li>Harman Kardon Surround Sound</li>
+                            <li>Driving Assistant Professional</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="car-card">
+                <div class="car-image">
+                    <img src="https://images.unsplash.com/photo-1619405399517-d7fce0f13302" alt="Audi A6">
+                    <div class="car-overlay">
+                        <h3>Audi A6</h3>
+                        <p>Technology and sophistication</p>
+                    </div>
+                    <div class="car-details">
+                        <h3>Audi A6</h3>
+                        <ul>
+                            <li>2.0L TFSI Engine</li>
+                            <li>Mild Hybrid Technology</li>
+                            <li>MMI Navigation Plus</li>
+                            <li>Audi Virtual Cockpit</li>
+                            <li>Matrix LED Headlights</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Small Cars Section -->
+    <section id="small-cars" class="vehicle-category">
+        <div class="section-title">
+            <h2>Small Cars</h2>
+            <div class="scroll-buttons">
+                <button class="scroll-btn scroll-left"><i class="fas fa-chevron-left"></i></button>
+                <button class="scroll-btn scroll-right"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+        
+        <div class="featured-container">
+            <div class="car-card">
+                <div class="car-image">
+                    <img src= "prado tx.jpg"alt="Mazda 2">
+                    <div class="car-overlay">
+                        <h3>Mazda 2</h3>
+                        <p>Stylish compact with premium feel</p>
+                    </div>
+                    <div class="car-details">
+                        <h3>Mazda 2</h3>
+                        <ul>
+                            <li>1.5L SkyActiv-G Engine</li>
+                            <li>G-Vectoring Control Plus</li>
+                            <li>MZD Connect Infotainment</li>
+                            <li>i-ACTIVSENSE Safety</li>
+                            <li>Premium Interior Materials</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="car-card">
+                <div class="car-image">
+                    <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d" alt="Toyota Yaris">
+                    <div class="car-overlay">
+                        <h3>Toyota Yaris</h3>
+                        <p>Efficient and reliable city car</p>
+                    </div>
+                    <div class="car-details">
+                        <h3>Toyota Yaris</h3>
+                        <ul>
+                            <li>1.5L Hybrid Powertrain</li>
+                            <li>Toyota Safety Sense</li>
+                            <li>Smart Entry System</li>
+                            <li>Apple CarPlay & Android Auto</li>
+                            <li>Low Fuel Consumption</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="car-card">
+                <div class="car-image">
+                    <img src="https://images.unsplash.com/photo-1582639510494-c80b5de9f148" alt="Volkswagen Polo">
+                    <div class="car-overlay">
+                        <h3>Volkswagen Polo</h3>
+                        <p>German engineering in compact form</p>
+                    </div>
+                    <div class="car-details">
+                        <h3>Volkswagen Polo</h3>
+                        <ul>
+                            <li>1.0L TSI Engine</li>
+                            <li>Digital Cockpit</li>
+                            <li>App-Connect Smartphone Integration</li>
+                            <li>Driver Alert System</li>
+                            <li>Park Distance Control</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <h2>Contact Us</h2>
+        <div class="contact-grid">
+            <div class="business-contact">
+                <h3>Car City Limited</h3>
+                <p>Kindaruma rd, opposite Silver Harbour apartments</p>
+                <p>P.O.Box 18191 - 00100</p>
+                <p>Nairobi, Kenya</p>
+                <p><a href="tel:+254204401407">+254 204 401 407</a></p>
+                <p><a href="mailto:carcitylimited@gmail.com">carcitylimited@gmail.com</a></p>
+            </div>
+            
+            <div class="proprietor-contact">
+                <h3>Proprietor</h3>
+                <p>J.B.TERER</p>
+                <p><a href="tel:+254722560978">+254 722 560 978</a></p>
+                <p><a href="tel:+254727715353">+254 727 715 353</a></p>
+                <p><a href="mailto:kapsundu@yahoo.com">kapsundu@yahoo.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Car City Limited. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Scroll functionality for all car categories
+        document.addEventListener('DOMContentLoaded', function() {
+            // Sidebar functionality
+            const sidebarToggle = document.getElementById('sidebar-toggle');
+            const sidebar = document.querySelector('.sidebar');
+            const sidebarClose = document.querySelector('.sidebar-close');
+            const sidebarOverlay = document.getElementById('sidebar-overlay');
+            const sidebarLinks = document.querySelectorAll('.sidebar-link');
+            
+            // Open sidebar
+            sidebarToggle.addEventListener('click', function() {
+                sidebar.classList.add('open');
+                sidebarOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+            
+            // Close sidebar
+            function closeSidebar() {
+                sidebar.classList.remove('open');
+                sidebarOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+            
+            sidebarClose.addEventListener('click', closeSidebar);
+            sidebarOverlay.addEventListener('click', closeSidebar);
+            
+            // Handle sidebar link clicks
+            sidebarLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // Don't prevent default if it's a link to another page
+                    if (!this.getAttribute('href').startsWith('#')) {
+                        return;
+                    }
+                    
+                    e.preventDefault();
+                    
+                    // Remove active class from all links
+                    sidebarLinks.forEach(l => l.classList.remove('active'));
+                    
+                    // Add active class to clicked link
+                    this.classList.add('active');
+                    
+                    // Scroll to section
+                    const target = document.querySelector(this.getAttribute('href'));
+                    window.scrollTo({
+                        top: target.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close sidebar on mobile
+                    if (window.innerWidth <= 992) {
+                        closeSidebar();
+                    }
+                });
+            });
+            
+            // Scroll buttons for car galleries
+            const categories = document.querySelectorAll('.vehicle-category');
+            
+            categories.forEach(category => {
+                const container = category.querySelector('.featured-container');
+                const leftBtn = category.querySelector('.scroll-left');
+                const rightBtn = category.querySelector('.scroll-right');
+                
+                leftBtn.addEventListener('click', function() {
+                    container.scrollBy({
+                        left: -300,
+                        behavior: 'smooth'
+                    });
+                });
+                
+                rightBtn.addEventListener('click', function() {
+                    container.scrollBy({
+                        left: 300,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+            
+            // Highlight active section in sidebar based on scroll
+            window.addEventListener('scroll', function() {
+                const scrollPosition = window.scrollY;
+                
+                // Check which section is in view
+                document.querySelectorAll('section[id]').forEach(section => {
+                    const sectionTop = section.offsetTop - 200;
+                    const sectionHeight = section.offsetHeight;
+                    const sectionId = section.getAttribute('id');
+                    
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                        // Remove active class from all links
+                        sidebarLinks.forEach(link => link.classList.remove('active'));
+                        
+                        // Add active class to corresponding link
+                        const activeLink = document.querySelector(`.sidebar-link[href="#${sectionId}"]`);
+                        if (activeLink) {
+                            activeLink.classList.add('active');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
 </body>
-</html>-->
+</html>
