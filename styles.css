@@ -631,10 +631,21 @@
     border-radius: 200px;
     box-shadow: 2px 2px 21px 1px #d4af37b0;
   }
-  @media (max-width: 768px) {
+   @media (max-width: 768px) {
     .car-card {
         width: 90%;
         padding: 15px;
+    }
+
+    .car-overlay {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .car-details {
+        font-size: 14px;
+        padding: 10px;
+        display: grid;
     }
 }
 
@@ -643,5 +654,16 @@
         width: 100%;
         padding: 10px;
         font-size: 14px;
+    }
+
+    .car-overlay {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    .car-details {
+        font-size: 12px;
+        padding: 8px;
+        display: grid;
     }
 }
