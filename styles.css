@@ -655,7 +655,13 @@
         padding: 10px;
         font-size: 14px;
     }
-
+    .sidebar-toggle{
+      width: 40px;
+      height: 40px;
+      left: 13px;
+      top: 90px;
+      z-index: 2999;
+    }
     .car-overlay {
         font-size: 12px;
         padding: 5px;
