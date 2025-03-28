@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Featured Vehicles - Car City Limited</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-     <!--Preloader
+     <!-- Preloader -->
      <div id="preloader">
          <div class="vivarium-info">
          <h5 class="powered-by">POWERED BY</h5>
          <h3 class="vivarium">VIVARIUM</h3>
-     </div> -->
+         </div>
+     </div> 
     <!-- Header Section -->
     <header class="header">
         <div class="header-content">
@@ -525,6 +526,14 @@
                     }
                 });
             });
+        });
+    </script>
+    <script>
+        var loader = document.getElementById("preloader");
+
+        window.addEventListener("load",function(){
+            setTimeout(function(){
+            loader.style.display="none";}, 3500);
         });
     </script>
 </body>
