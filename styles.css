@@ -609,7 +609,7 @@
       height: 45px;
       left: 15px;
       top: 150px;
-      z-index: 3000;
+      z-index: 2999;
     }
     
     .vehicle-category {
@@ -666,6 +666,24 @@
         padding: 8px;
         display: grid;
     }
+    #preloader{
+      background: #4a484b url("sliding_square_loader_view.gif") no-repeat center;
+      height: 100vh;
+      width: 100%;
+      position: fixed;
+      z-index:3000;
+      text-align: center;
+}
+.vivarium-info{
+background: -webkit-linear-gradient(#fe1555, #d4af37);
+background-clip: text;
+-webkit-text-fill-color: transparent;
+display: grid;
+justify-content: center;
+align-items: center;
+top: 1;
+
+}
 }
 #preloader{
   background: #4a484b url("sliding_square_loader_view.gif") no-repeat center;
