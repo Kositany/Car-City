@@ -8,12 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-     <!--Preloader 
-     <div id="preloader">
-         <div class="vivarium-info">
-         <h5 class="powered-by">POWERED BY</h5>
-         <h3 class="vivarium">VIVARIUM</h3>
-     </div> -->
     <!-- Header Section -->
     <header class="header">
         <div class="header-content">
@@ -23,10 +17,12 @@
             <div class="nav-contact">
                 <nav class="nav-links">
                     <a href="index.html">Home</a>
-                    <a href="featured.html" class="active">Featured Vehicles</a>
+                    <a href="featured.html" class="active">Vehicles</a>
+                    <a href="comparison.html">Compare</a>
+                    <!--<a href="#contact">About</a>-->
                 </nav>
-                <a href="tel:+254204401407" class="contact-btn">
-                    <i class="fas fa-phone"></i> +254 204 401 407
+                <a href="tel:+254204401407" class="contact-btn" title="Call Us: +254 204 401 407">
+                    <i class="fas fa-phone">Call Us</i>
                 </a>
             </div>
         </div>
@@ -55,19 +51,19 @@
             </button>
         </div>
         <div class="sidebar-content">
-            <a href="#suvs" class="sidebar-link active">
+            <a href="suvs.html" class="sidebar-link">
                 <i class="fas fa-truck-monster"></i>
                 <span>Luxury SUVs</span>
             </a>
-            <a href="#pickups" class="sidebar-link">
+            <a href="pickups.html" class="sidebar-link">
                 <i class="fas fa-truck-pickup"></i>
                 <span>Pickup Trucks</span>
             </a>
-            <a href="#saloons" class="sidebar-link">
+            <a href="saloons.html" class="sidebar-link">
                 <i class="fas fa-car"></i>
                 <span>Saloon Cars</span>
             </a>
-            <a href="#small-cars" class="sidebar-link">
+            <a href="small-cars.html" class="sidebar-link">
                 <i class="fas fa-car-side"></i>
                 <span>Small Cars</span>
             </a>
@@ -85,14 +81,17 @@
     <section id="suvs" class="vehicle-category">
         <div class="section-title">
             <h2>Luxury SUVs</h2>
-            <div class="scroll-buttons">
-                <button class="scroll-btn scroll-left"><i class="fas fa-chevron-left"></i></button>
-                <button class="scroll-btn scroll-right"><i class="fas fa-chevron-right"></i></button>
+            <div class="section-actions">
+                <a href="suvs.html" class="view-all-link">View All <i class="fas fa-arrow-right"></i></a>
+                <div class="scroll-buttons">
+                    <button class="scroll-btn scroll-left"><i class="fas fa-chevron-left"></i></button>
+                    <button class="scroll-btn scroll-right"><i class="fas fa-chevron-right"></i></button>
+                </div>
             </div>
         </div>
         
         <div class="featured-container">
-            <div class="car-card" onclick="toggleDetails">
+            <div class="car-card">
                 <div class="car-image">
                     <img src="https://images.unsplash.com/photo-1550355291-bbee04a92027" alt="Range Rover Sport">
                     <div class="car-overlay">
@@ -112,7 +111,7 @@
                 </div>
             </div>
             
-            <div class="car-card" onclick="toggleDetails">
+            <div class="car-card">
                 <div class="car-image">
                     <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8" alt="Mercedes GLE">
                     <div class="car-overlay">
@@ -132,7 +131,7 @@
                 </div>
             </div>
             
-            <div class="car-card" onclick="toggleDetails">
+            <div class="car-card">
                 <div class="car-image">
                     <img src="https://images.unsplash.com/photo-1568987564215-b4fd8fdc986b" alt="Audi Q7">
                     <div class="car-overlay">
@@ -152,7 +151,7 @@
                 </div>
             </div>
             
-            <div class="car-card" onclick="toggleDetails">
+            <div class="car-card">
                 <div class="car-image">
                     <img src="https://images.unsplash.com/photo-1563720223185-11003d516935" alt="Volvo XC90">
                     <div class="car-overlay">
@@ -178,21 +177,24 @@
     <section id="pickups" class="vehicle-category">
         <div class="section-title">
             <h2>Pickup Trucks</h2>
-            <div class="scroll-buttons">
-                <button class="scroll-btn scroll-left"><i class="fas fa-chevron-left"></i></button>
-                <button class="scroll-btn scroll-right"><i class="fas fa-chevron-right"></i></button>
+            <div class="section-actions">
+                <a href="pickups.html" class="view-all-link">View All <i class="fas fa-arrow-right"></i></a>
+                <div class="scroll-buttons">
+                    <button class="scroll-btn scroll-left"><i class="fas fa-chevron-left"></i></button>
+                    <button class="scroll-btn scroll-right"><i class="fas fa-chevron-right"></i></button>
+                </div>
             </div>
         </div>
         
         <div class="featured-container">
-            <div class="car-card" onclick="toggleDetails">
+            <div class="car-card">
                 <div class="car-image">
                     <img src="https://images.unsplash.com/photo-1613214535042-47d3aeefb420" alt="Toyota Hilux">
                     <div class="car-overlay">
                         <h3>Toyota Hilux</h3>
                         <p>Legendary reliability and versatility</p>
                     </div>
-                    <div class="car-details" onclick="toggleDetails">
+                    <div class="car-details">
                         <h3>Toyota Hilux</h3>
                         <ul>
                             <li>2.8L Turbo Diesel Engine</li>
@@ -205,7 +207,7 @@
                 </div>
             </div>
             
-            <div class="car-card" onclick="toggleDetails">
+            <div class="car-card">
                 <div class="car-image">
                     <img src="https://images.unsplash.com/photo-1599269571932-addec9e13226" alt="Ford Ranger">
                     <div class="car-overlay">
@@ -225,7 +227,7 @@
                 </div>
             </div>
             
-            <div class="car-card" onclick="toggleDetails">
+            <div class="car-card">
                 <div class="car-image">
                     <img src="https://images.unsplash.com/photo-1609518336477-5ab6249c7f43" alt="Isuzu D-Max">
                     <div class="car-overlay">
@@ -251,14 +253,17 @@
     <section id="saloons" class="vehicle-category">
         <div class="section-title">
             <h2>Saloon Cars</h2>
-            <div class="scroll-buttons">
-                <button class="scroll-btn scroll-left"><i class="fas fa-chevron-left"></i></button>
-                <button class="scroll-btn scroll-right"><i class="fas fa-chevron-right"></i></button>
+            <div class="section-actions">
+                <a href="saloons.html" class="view-all-link">View All <i class="fas fa-arrow-right"></i></a>
+                <div class="scroll-buttons">
+                    <button class="scroll-btn scroll-left"><i class="fas fa-chevron-left"></i></button>
+                    <button class="scroll-btn scroll-right"><i class="fas fa-chevron-right"></i></button>
+                </div>
             </div>
         </div>
         
         <div class="featured-container">
-            <div class="car-card" onclick="toggleDetails">
+            <div class="car-card">
                 <div class="car-image">
                     <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738" alt="Mercedes C-Class">
                     <div class="car-overlay">
@@ -278,14 +283,14 @@
                 </div>
             </div>
             
-            <div class="car-card" onclick="toggleDetails">
+            <div class="car-card">
                 <div class="car-image">
                     <img src="https://images.unsplash.com/photo-1580274455191-1c62238fa333" alt="BMW 5 Series">
                     <div class="car-overlay">
                         <h3>BMW 5 Series</h3>
                         <p>Business class with a sporting edge</p>
                     </div>
-                    <div class="car-details" >
+                    <div class="car-details">
                         <h3>BMW 5 Series</h3>
                         <ul>
                             <li>3.0L TwinPower Turbo Engine</li>
@@ -298,7 +303,7 @@
                 </div>
             </div>
             
-            <div class="car-card" onclick="toggleDetails">
+            <div class="car-card">
                 <div class="car-image">
                     <img src="https://images.unsplash.com/photo-1619405399517-d7fce0f13302" alt="Audi A6">
                     <div class="car-overlay">
@@ -324,16 +329,19 @@
     <section id="small-cars" class="vehicle-category">
         <div class="section-title">
             <h2>Small Cars</h2>
-            <div class="scroll-buttons">
-                <button class="scroll-btn scroll-left"><i class="fas fa-chevron-left"></i></button>
-                <button class="scroll-btn scroll-right"><i class="fas fa-chevron-right"></i></button>
+            <div class="section-actions">
+                <a href="small-cars.html" class="view-all-link">View All <i class="fas fa-arrow-right"></i></a>
+                <div class="scroll-buttons">
+                    <button class="scroll-btn scroll-left"><i class="fas fa-chevron-left"></i></button>
+                    <button class="scroll-btn scroll-right"><i class="fas fa-chevron-right"></i></button>
+                </div>
             </div>
         </div>
         
         <div class="featured-container">
-            <div class="car-card" onclick="toggleDetails">
+            <div class="car-card">
                 <div class="car-image">
-                    <img src= "prado tx.jpg"alt="Mazda 2">
+                    <img src="https://images.unsplash.com/photo-1615908397724-6dc711db34a7" alt="Mazda 2">
                     <div class="car-overlay">
                         <h3>Mazda 2</h3>
                         <p>Stylish compact with premium feel</p>
@@ -351,7 +359,7 @@
                 </div>
             </div>
             
-            <div class="car-card" onclick="toggleDetails">
+            <div class="car-card">
                 <div class="car-image">
                     <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d" alt="Toyota Yaris">
                     <div class="car-overlay">
@@ -371,7 +379,7 @@
                 </div>
             </div>
             
-            <div class="car-card" onclick="toggleDetails">
+            <div class="car-card">
                 <div class="car-image">
                     <img src="https://images.unsplash.com/photo-1582639510494-c80b5de9f148" alt="Volkswagen Polo">
                     <div class="car-overlay">
@@ -399,9 +407,7 @@
         <div class="contact-grid">
             <div class="business-contact">
                 <h3>Car City Limited</h3>
-                <a href="https://maps.app.goo.gl/J9K49qme48fAgDSq6" target="blank">
                 <p>Kindaruma rd, opposite Silver Harbour apartments</p>
-                </a>
                 <p>P.O.Box 18191 - 00100</p>
                 <p>Nairobi, Kenya</p>
                 <p><a href="tel:+254204401407">+254 204 401 407</a></p>
@@ -526,15 +532,6 @@
                 });
             });
         });
-    </script>
-     <script>
-        
-        //var loader = document.getElementById("preloader");
-
-        //window.addEventListener("load",function(){
-          //  setTimeout(function(){
-            //loader.style.display="none";}, 3500);
-       // });
     </script>
 </body>
 </html>
