@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Vehicles - Car City Limited</title>
+    <link rel="stylesheet" href="styles.css">
+    <!--<link rel="stylesheet" href="additions.css">-->
+    <link rel="stylesheet" href="categories.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header with glass effect -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="car city logo.jpg" alt="Car City Limited Logo" class="logo">
+                </a>
+            </div>
+            
+            <div class="nav-contact">
+                <nav class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="featured.html">Vehicles</a>
+                    <a href="comparison.html" class="active">Compare</a>
+                    <!--<a href="#contact">About</a>-->
+                </nav>
+                
+                <a href="#contact" class="contact-btn">
+                    <i class="fas fa-phone-alt"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero category-hero">
+        <div class="hero-content">
+            <h1>Vehicle Comparison Tool</h1>
+            <p>Compare different vehicles side by side to help you make an informed decision about your next car purchase.</p>
+        </div>
+    </section>
+    
+    <!-- Comparison Tool -->
+    <div class="comparison-container">
+        <div class="comparison-header">
+            <h2>Select Vehicles to Compare</h2>
+            <p>Choose up to 3 vehicles from our inventory to compare specifications, features, and pricing side by side.</p>
+        </div>
+        
+        <div class="comparison-controls">
+            <div class="vehicle-selector">
+                <select id="vehicle1" onchange="updateComparison()">
+                    <option value="">Select First Vehicle</option>
+                    <optgroup label="SUVs">
+                        <option value="range-rover">Range Rover Sport</option>
+                        <option value="mercedes-gle">Mercedes GLE</option>
+                        <option value="volvo-xc90">Volvo XC90</option>
+                        <option value="audi-q7">Audi Q7</option>
+                        <option value="bmw-x5">BMW X5</option>
+                    </optgroup>
+                    <optgroup label="Pickups">
+                        <option value="toyota-hilux">Toyota Hilux</option>
+                        <option value="ford-ranger">Ford Ranger</option>
+                        <option value="isuzu-dmax">Isuzu D-Max</option>
+                        <option value="nissan-navara">Nissan Navara</option>
+                        <option value="vw-amarok">VW Amarok</option>
+                    </optgroup>
+                    <optgroup label="Saloons">
+                        <option value="mercedes-c">Mercedes C-Class</option>
+                        <option value="bmw-5">BMW 5 Series</option>
+                        <option value="audi-a6">Audi A6</option>
+                        <option value="lexus-es">Lexus ES</option>
+                        <option value="toyota-camry">Toyota Camry</option>
+                    </optgroup>
+                    <optgroup label="Small Cars">
+                        <option value="mazda-2">Mazda 2</option>
+                        <option value="toyota-yaris">Toyota Yaris</option>
+                        <option value="vw-polo">Volkswagen Polo</option>
+                        <option value="honda-jazz">Honda Jazz</option>
+                        <option value="mini-cooper">Mini Cooper</option>
+                    </optgroup>
+                </select>
+            </div>
+            
+            <div class="vehicle-selector">
+                <select id="vehicle2" onchange="updateComparison()">
+                    <option value="">Select Second Vehicle</option>
+                    <optgroup label="SUVs">
+                        <option value="range-rover">Range Rover Sport</option>
+                        <option value="mercedes-gle">Mercedes GLE</option>
+                        <option value="volvo-xc90">Volvo XC90</option>
+                        <option value="audi-q7">Audi Q7</option>
+                        <option value="bmw-x5">BMW X5</option>
+                    </optgroup>
+                    <optgroup label="Pickups">
+                        <option value="toyota-hilux">Toyota Hilux</option>
+                        <option value="ford-ranger">Ford Ranger</option>
+                        <option value="isuzu-dmax">Isuzu D-Max</option>
+                        <option value="nissan-navara">Nissan Navara</option>
+                        <option value="vw-amarok">VW Amarok</option>
+                    </optgroup>
+                    <optgroup label="Saloons">
+                        <option value="mercedes-c">Mercedes C-Class</option>
+                        <option value="bmw-5">BMW 5 Series</option>
+                        <option value="audi-a6">Audi A6</option>
+                        <option value="lexus-es">Lexus ES</option>
+                        <option value="toyota-camry">Toyota Camry</option>
+                    </optgroup>
+                    <optgroup label="Small Cars">
+                        <option value="mazda-2">Mazda 2</option>
+                        <option value="toyota-yaris">Toyota Yaris</option>
+                        <option value="vw-polo">Volkswagen Polo</option>
+                        <option value="honda-jazz">Honda Jazz</option>
+                        <option value="mini-cooper">Mini Cooper</option>
+                    </optgroup>
+                </select>
+            </div>
+            
+            <div class="vehicle-selector">
+                <select id="vehicle3" onchange="updateComparison()">
+                    <option value="">Select Third Vehicle (Optional)</option>
+                    <optgroup label="SUVs">
+                        <option value="range-rover">Range Rover Sport</option>
+                        <option value="mercedes-gle">Mercedes GLE</option>
+                        <option value="volvo-xc90">Volvo XC90</option>
+                        <option value="audi-q7">Audi Q7</option>
+                        <option value="bmw-x5">BMW X5</option>
+                    </optgroup>
+                    <optgroup label="Pickups">
+                        <option value="toyota-hilux">Toyota Hilux</option>
+                        <option value="ford-ranger">Ford Ranger</option>
+                        <option value="isuzu-dmax">Isuzu D-Max</option>
+                        <option value="nissan-navara">Nissan Navara</option>
+                        <option value="vw-amarok">VW Amarok</option>
+                    </optgroup>
+                    <optgroup label="Saloons">
+                        <option value="mercedes-c">Mercedes C-Class</option>
+                        <option value="bmw-5">BMW 5 Series</option>
+                        <option value="audi-a6">Audi A6</option>
+                        <option value="lexus-es">Lexus ES</option>
+                        <option value="toyota-camry">Toyota Camry</option>
+                    </optgroup>
+                    <optgroup label="Small Cars">
+                        <option value="mazda-2">Mazda 2</option>
+                        <option value="toyota-yaris">Toyota Yaris</option>
+                        <option value="vw-polo">Volkswagen Polo</option>
+                        <option value="honda-jazz">Honda Jazz</option>
+                        <option value="mini-cooper">Mini Cooper</option>
+                    </optgroup>
+                </select>
+            </div>
+        </div>
+        
+        <div id="comparison-results">
+            <p class="text-center">Select vehicles above to start comparing.</p>
+        </div>
+        
+        <button id="reset-comparison" class="reset-comparison" onclick="resetComparison()">Reset Comparison</button>
+    </div>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <div class="contact-grid">
+            <div class="business-contact">
+                <h3>Car City Limited</h3>
+                <p>Kindaruma rd, opposite Silver Harbour apartments</p>
+                <p>P.O.Box 18191 - 00100</p>
+                <p>Nairobi, Kenya</p>
+                <p><a href="tel:+254204401407">+254 204 401 407</a></p>
+                <p><a href="mailto:carcitylimited@gmail.com">carcitylimited@gmail.com</a></p>
+            </div>
+            
+            <div class="proprietor-contact">
+                <h3>Proprietor</h3>
+                <p>J.B.TERER</p>
+                <p><a href="tel:+254722560978">+254 722 560 978</a></p>
+                <p><a href="tel:+254727715353">+254 727 715 353</a></p>
+                <p><a href="mailto:kapsundu@yahoo.com">kapsundu@yahoo.com</a></p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Car City Limited. All Rights Reserved.</p>
+    </footer>
+    
+    <script>
+        // Vehicle Database
+        const vehicles = {
+            'range-rover': {
+                name: 'Range Rover Sport',
+                category: 'SUV',
+                price: 'KSh 14,950,000',
+                engine: '3.0L P400 Petrol',
+                transmission: 'Automatic',
+                year: '2023',
+                fuelType: 'Petrol',
+                seating: '5',
+                drive: '4x4',
+                features: ['Air Suspension', '360° Camera', 'Panoramic Roof', 'Heated Seats', 'Meridian Sound'],
+                image: 'https://images.unsplash.com/photo-1550355291-bbee04a92027?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
+                fuelEconomy: '9.2 L/100km',
+                topSpeed: '225 km/h',
+                acceleration: '5.9 seconds (0-100 km/h)'
+            },
+            'mercedes-gle': {
+                name: 'Mercedes GLE',
+                category: 'SUV',
+                price: 'KSh 12,800,000',
+                engine: '3.0L Inline-6 Diesel',
+                transmission: 'Automatic',
+                year: '2023',
+                fuelType: 'Diesel',
+                seating: '5',
+                drive: '4MATIC AWD',
+                features: ['MBUX System', '64-Color Ambient Lighting', 'Active Suspension', 'Burmester Sound'],
+                image: 'https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
+                fuelEconomy: '8.1 L/100km',
+                topSpeed: '230 km/h',
+                acceleration: '6.1 seconds (0-100 km/h)'
+            },
+            'volvo-xc90': {
+                name: 'Volvo XC90',
+                category: 'SUV',
+                price: 'KSh 10,500,000',
+                engine: '2.0L Twin-Charged Hybrid',
+                transmission: 'Automatic',
+                year: '2023',
+                fuelType: 'Hybrid',
+                seating: '7',
+                drive: 'AWD',
+                features: ['Pilot Assist', 'Air Purifier', 'B&W Sound System', '7 Seats'],
+                image: 'https://images.unsplash.com/photo-1563720223185-11003d516935?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
+                fuelEconomy: '7.2 L/100km',
+                topSpeed: '210 km/h',
+                acceleration: '6.5 seconds (0-100 km/h)'
+            },
+            'audi-q7': {
+                name: 'Audi Q7',
+                category: 'SUV',
+                price: 'KSh 11,200,000',
+                engine: '3.0L TFSI V6 Petrol',
+                transmission: 'Automatic',
+                year: '2023',
+                fuelType: 'Petrol',
+                seating: '7',
+                drive: 'Quattro AWD',
+                features: ['Quattro AWD', 'Virtual Cockpit', 'Bang & Olufsen 3D', 'Adaptive Suspension'],
+                image: 'https://images.unsplash.com/photo-1568987564215-b4fd8fdc986b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
+                fuelEconomy: '9.4 L/100km',
+                topSpeed: '250 km/h',
+                acceleration: '5.7 seconds (0-100 km/h)'
+            },
+            'bmw-x5': {
+                name: 'BMW X5',
+                category: 'SUV',
+                price: 'KSh 12,300,000',
+                engine: '3.0L TwinPower Petrol',
+                transmission: 'Automatic',
+                year: '2023',
+                fuelType: 'Petrol',
+                seating: '5',
+                drive: 'xDrive AWD',
+                features: ['Harman Kardon Audio', 'xDrive AWD', 'Gesture Control', 'Panoramic Sky Lounge'],
+                image: 'https://images.unsplash.com/photo-1575652646295-0c73a7eade3d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
+                fuelEconomy: '9.6 L/100km',
+                topSpeed: '243 km/h',
+                acceleration: '5.5 seconds (0-100 km/h)'
+            },
+            'toyota-hilux': {
+                name: 'Toyota Hilux',
+                category: 'Pickup',
+                price: 'KSh 7,200,000',
+                engine: '2.8L Turbo Diesel',
+                transmission: 'Automatic',
+                year: '2023',
+                fuelType: 'Diesel',
+                seating: '5',
+                drive: '4x4',
+                features: ['4x4 System', '3,500kg Towing', 'Tough Deck', 'Safety Sense'],
+                image: 'https://images.unsplash.com/photo-1613214535042-47d3aeefb420?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
+                fuelEconomy: '7.8 L/100km',
+                topSpeed: '175 km/h',
+                acceleration: '10.1 seconds (0-100 km/h)'
+            },
+            'ford-ranger': {
+                name: 'Ford Ranger',
+                category: 'Pickup',
+                price: 'KSh 6,800,000',
+                engine: '2.0L Bi-Turbo Diesel',
+                transmission: 'Automatic',
+                year: '2023',
+                fuelType: 'Diesel',
+                seating: '5',
+                drive: '4x4',
+                features: ['10-Speed Auto', 'SYNC 4', 'FordPass Connect', 'Zone Lighting'],
+                image: 'https://images.unsplash.com/photo-1599269571932-addec9e13226?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
+                fuelEconomy: '7.5 L/100km',
+                topSpeed: '180 km/h',
+                acceleration: '9.8 seconds (0-100 km/h)'
+            },
+            'isuzu-dmax': {
+                name: 'Isuzu D-Max',
+                category: 'Pickup',
+                price: 'KSh 5,900,000',
+                engine: '3.0L Turbo Diesel',
+                transmission: 'Automatic',
+                year: '2023',
+                fuelType: 'Diesel',
+                seating: '5',
+                drive: '4x4',
+                features: ['Heavy-Duty Suspension', 'Terrain Command 4WD', '800mm Wading', 'Advanced Safety'],
+                image: 'https://images.unsplash.com/photo-1609518336477-5ab6249c7f43?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
+                fuelEconomy: '8.0 L/100km',
+                topSpeed: '170 km/h',
+                acceleration: '10.2 seconds (0-100 km/h)'
+            },
+            'nissan-navara': {
+                name: 'Nissan Navara',
+                category: 'Pickup',
+                price: 'KSh 6,300,000',
+                engine: '2.5L Twin-Turbo Diesel',
+                transmission: 'Automatic',
+                year: '2023',
+                fuelType: 'Diesel',
+                seating: '5',
+                drive: '4x4',
+                features: ['Coil Suspension', 'Around View Monitor', 'Utili-Track System', 'Dual-Zone Climate'],
+                image: 'https://images.unsplash.com/photo-1599157134396-e90e141a9257?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
+                fuelEconomy: '7.3 L/100km',
+                topSpeed: '175 km/h',
+                acceleration: '10.5 seconds (0-100 km/h)'
+            },
+            'vw-amarok': {
+                name: 'VW Amarok',
+                category: 'Pickup',
+                price: 'KSh 7,700,000',
+                engine: '3.0L V6 TDI Diesel',
+                transmission: 'Automatic',
+                year: '2023',
+                fuelType: 'Diesel',
+                seating: '5',
+                drive: '4MOTION AWD',
+                features: ['V6 TDI Engine', 'Vienna Leather', 'Discover Pro Nav', 'Permanent 4MOTION'],
+                image: 'https://images.unsplash.com/photo-1625785273326-47934e027929?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
+                fuelEconomy: '8.4 L/100km',
+                topSpeed: '190 km/h',
+                acceleration: '8.5 seconds (0-100 km/h)'
+            },
+            'mercedes-c': {
+                name: 'Mercedes C-Class',
+                category: 'Saloon',
+                price: 'KSh 8,500,000',
+                engine: '2.0L Turbo Petrol',
+                transmission: 'Automatic',
+                year: '2023',
+                fuelType: 'Petrol',
+                seating: '5',
+                drive: 'RWD',
+                features: ['9G-TRONIC', 'MBUX AR Navigation', 'Burmester 3D Sound', 'Digital Light'],
+                image: 'https://images.unsplash.com/photo-1617814076367-b759c7d7e738?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
+                fuelEconomy: '6.5 L/100km',
+                topSpeed: '250 km/h',
+                acceleration: '6.0 seconds (0-100 km/h)'
+            },
+            'bmw-5': {
+                name: 'BMW 5 Series',
+                category: 'Saloon',
+                price: 'KSh 10,200,000',
+                engine: '3.0L TwinPower Petrol',
+                transmission: 'Automatic',
+                year: '2023',
+                fuelType: 'Petrol',
+                seating: '5',
+                drive: 'RWD',
+                features: ['8-Speed Sport Auto', 'Live Cockpit Pro', 'Harman Kardon', 'Driving Assistant Pro'],
+                image: 'https://images.unsplash.com/photo-1580274455191-1c62238fa333?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
+                fuelEconomy: '7.0 L/100km',
+                topSpeed: '250 km/h',
+                acceleration: '5.2 seconds (0-100 km/h)'
+            },
+            'audi-a6': {
+                name: 'Audi A6',
+                category: 'Saloon',
+                price: 'KSh 9,700,000',
+                engine: '2.0L TFSI Petrol',
+                transmission: 'Automatic',
+                year: '2023',
+                fuelType: 'Petrol',
+                seating: '5',
+                drive: 'Front-wheel drive',
+                features: ['Mild Hybrid', 'MMI Navigation Plus', 'Virtual Cockpit', 'Matrix LED'],
+                image: 'https://images.unsplash.com/photo-1619405399517-d7fce0f13302?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
+                fuelEconomy: '6.8 L/100km',
+                topSpeed: '245 km/h',
+                acceleration: '6.9 seconds (0-100 km/h)'
+            },
+            'lexus-es': {
+                name: 'Lexus ES',
+                category: 'Saloon',
+                price: 'KSh 8,300,000',
+                engine: '2.5L Hybrid',
+                transmission: 'CVT',
+                year: '2023',
+                fuelType: 'Hybrid',
+                seating: '5',
+                drive: 'FWD',
+                features: ['Hybrid Drive', 'Lexus Safety System+', 'Mark Levinson Audio', 'Semi-Aniline Leather'],
+                image: 'https://images.unsplash.com/photo-1544558635-667480601430?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
+                fuelEconomy: '5.3 L/100km',
+                topSpeed: '180 km/h',
+                acceleration: '8.9 seconds (0-100 km/h)'
+            },
+            'toyota-camry': {
+                name: 'Toyota Camry',
+                category: 'Saloon',
+                price: 'KSh 5,500,000',
+                engine: '2.5L Hybrid',
+                transmission: 'CVT',
+                year: '2023',
+                fuelType: 'Hybrid',
+                seating: '5',
+                drive: 'FWD',
+                features: ['Hybrid Powertrain', 'Safety Sense 2.5+', 'JBL Audio', 'Leather Trim'],
+                image: 'https://images.unsplash.com/photo-1603553329474-99f95f35394f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
+                fuelEconomy: '4.9 L/100km',
+                topSpeed: '180 km/h',
+                acceleration: '8.3 seconds (0-100 km/h)'
+            },
+            'mazda-2': {
+                name: 'Mazda 2',
+                category: 'Small Car',
+                price: 'KSh 2,900,000',
+                engine: '1.5L SkyActiv-G Petrol',
+                transmission: 'Automatic',
+                year: '2023',
+                fuelType: 'Petrol',
+                seating: '5',
+                drive: 'FWD',
+                features: ['G-Vectoring Control', 'MZD Connect', 'i-ACTIVSENSE', 'Premium Materials'],
+                image: 'https://images.unsplash.com/photo-1552642986-ccb41e7059e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
+                fuelEconomy: '5.1 L/100km',
+                topSpeed: '190 km/h',
+                acceleration: '9.8 seconds (0-100 km/h)'
+            },
+            'toyota-yaris': {
+                name: 'Toyota Yaris',
+                category: 'Small Car',
+                price: 'KSh 2,750,000',
+                engine: '1.5L Hybrid',
+                transmission: 'CVT',
+                year: '2023',
+                fuelType: 'Hybrid',
+                seating: '5',
+                drive: 'FWD',
+                features: ['Hybrid System', 'Safety Sense', 'Smart Entry', 'CarPlay/Android Auto'],
+                image: 'https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
+                fuelEconomy: '3.8 L/100km',
+                topSpeed: '175 km/h',
+                acceleration: '10.5 seconds (0-100 km/h)'
+            },
+            'vw-polo': {
+                name: 'Volkswagen Polo',
+                category: 'Small Car',
+                price: 'KSh 3,100,000',
+                engine: '1.0L TSI Petrol',
+                transmission: 'Automatic',
+                year: '2023',
+                fuelType: 'Petrol',
+                seating: '5',
+                drive: 'FWD',
+                features: ['Digital Cockpit', 'App-Connect', 'Driver Alert', 'Park Distance Control'],
+                image: 'https://images.unsplash.com/photo-1582639510494-c80b5de9f148?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
+                fuelEconomy: '5.0 L/100km',
+                topSpeed: '195 km/h',
+                acceleration: '9.5 seconds (0-100 km/h)'
+            },
+            'honda-jazz': {
+                name: 'Honda Jazz',
+                category: 'Small Car',
+                price: 'KSh 3,200,000',
+                engine: '1.5L e:HEV Hybrid',
+                transmission: 'E-CVT',
+                year: '2023',
+                fuelType: 'Hybrid',
+                seating: '5',
+                drive: 'FWD',
+                features: ['e:HEV Hybrid', 'Magic Seats', 'Honda CONNECT', 'Honda Sensing'],
+                image: 'https://images.unsplash.com/photo-1562252626-8fe89bc6afbb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
+                fuelEconomy: '4.5 L/100km',
+                topSpeed: '175 km/h',
+                acceleration: '9.9 seconds (0-100 km/h)'
+            },
+            'mini-cooper': {
+                name: 'Mini Cooper',
+                category: 'Small Car',
+                price: 'KSh 4,200,000',
+                engine: '1.5L TwinPower Turbo',
+                transmission: 'Automatic',
+                year: '2023',
+                fuelType: 'Petrol',
+                seating: '4',
+                drive: 'FWD',
+                features: ['TwinPower Turbo', 'Driving Modes', 'Harman Kardon Sound', 'MINI Connected'],
+                image: 'https://images.unsplash.com/photo-1560172078-9e0c56e5e0d0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
+                fuelEconomy: '5.5 L/100km',
+                topSpeed: '210 km/h',
+                acceleration: '7.9 seconds (0-100 km/h)'
+            }
+        };
+        
+        // Function to update comparison table
+        function updateComparison() {
+            const vehicle1Id = document.getElementById('vehicle1').value;
+            const vehicle2Id = document.getElementById('vehicle2').value;
+            const vehicle3Id = document.getElementById('vehicle3').value;
+            
+            // Get select elements
+            let selectedVehicles = [vehicle1Id, vehicle2Id, vehicle3Id].filter(id => id !== '');
+            
+            // If no vehicles selected, show message
+            if (selectedVehicles.length === 0) {
+                document.getElementById('comparison-results').innerHTML = '<p class="text-center">Select vehicles above to start comparing.</p>';
+                return;
+            }
+            
+            // Create comparison table HTML
+            let tableHTML = `
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Specification</th>
+            `;
+            
+            // Add table headers for each vehicle
+            selectedVehicles.forEach(vehicleId => {
+                const vehicle = vehicles[vehicleId];
+                tableHTML += `
+                    <th>
+                        <div class="vehicle-detail">
+                            <div class="vehicle-thumbnail">
+                                <img src="${vehicle.image}" alt="${vehicle.name}">
+                            </div>
+                            <div class="vehicle-name">${vehicle.name}</div>
+                            <div class="vehicle-price">${vehicle.price}</div>
+                        </div>
+                    </th>
+                `;
+            });
+            
+            tableHTML += `
+                        </tr>
+                    </thead>
+                    <tbody>
+            `;
+            
+            // Add rows for each comparison item
+            const specsToCompare = [
+                { key: 'category', label: 'Category' },
+                { key: 'year', label: 'Year' },
+                { key: 'engine', label: 'Engine' },
+                { key: 'transmission', label: 'Transmission' },
+                { key: 'fuelType', label: 'Fuel Type' },
+                { key: 'fuelEconomy', label: 'Fuel Economy' },
+                { key: 'topSpeed', label: 'Top Speed' },
+                { key: 'acceleration', label: 'Acceleration' },
+                { key: 'seating', label: 'Seating Capacity' },
+                { key: 'drive', label: 'Drive Type' }
+            ];
+            
+            // Generate rows for specs
+            specsToCompare.forEach(spec => {
+                tableHTML += `<tr><td>${spec.label}</td>`;
+                
+                // Get best value for numerical comparisons (fuel economy, acceleration)
+                let bestValue = null;
+                if (spec.key === 'fuelEconomy') {
+                    // For fuel economy, lower is better (extract numbers only)
+                    bestValue = Math.min(...selectedVehicles.map(id => {
+                        const value = vehicles[id][spec.key];
+                        return parseFloat(value.match(/\d+(\.\d+)?/)[0]);
+                    }));
+                } else if (spec.key === 'acceleration') {
+                    // For acceleration, lower is better (extract numbers only)
+                    bestValue = Math.min(...selectedVehicles.map(id => {
+                        const value = vehicles[id][spec.key];
+                        return parseFloat(value.match(/\d+(\.\d+)?/)[0]);
+                    }));
+                } else if (spec.key === 'topSpeed') {
+                    // For top speed, higher is better (extract numbers only)
+                    bestValue = Math.max(...selectedVehicles.map(id => {
+                        const value = vehicles[id][spec.key];
+                        return parseFloat(value.match(/\d+/)[0]);
+                    }));
+                }
+                
+                // For each selected vehicle, add a cell with the spec value
+                selectedVehicles.forEach(vehicleId => {
+                    const value = vehicles[vehicleId][spec.key];
+                    let cellClass = '';
+                    
+                    // Highlight the best values
+                    if (spec.key === 'fuelEconomy' && parseFloat(value.match(/\d+(\.\d+)?/)[0]) === bestValue) {
+                        cellClass = 'highlight';
+                    } else if (spec.key === 'acceleration' && parseFloat(value.match(/\d+(\.\d+)?/)[0]) === bestValue) {
+                        cellClass = 'highlight';
+                    } else if (spec.key === 'topSpeed' && parseFloat(value.match(/\d+/)[0]) === bestValue) {
+                        cellClass = 'highlight';
+                    }
+                    
+                    tableHTML += `<td class="${cellClass}">${value}</td>`;
+                });
+                
+                tableHTML += `</tr>`;
+            });
+            
+            // Add features section
+            tableHTML += `<tr><td>Key Features</td>`;
+            
+            selectedVehicles.forEach(vehicleId => {
+                tableHTML += `<td>
+                    <ul style="list-style-type: none; padding-left: 0;">
+                `;
+                
+                vehicles[vehicleId].features.forEach(feature => {
+                    tableHTML += `<li><i class="fas fa-check feature-present"></i> ${feature}</li>`;
+                });
+                
+                tableHTML += `</ul></td>`;
+            });
+            
+            tableHTML += `</tr></tbody></table>`;
+            
+            // Update the results container
+            document.getElementById('comparison-results').innerHTML = tableHTML;
+        }
+        
+        // Function to reset the comparison
+        function resetComparison() {
+            document.getElementById('vehicle1').value = '';
+            document.getElementById('vehicle2').value = '';
+            document.getElementById('vehicle3').value = '';
+            document.getElementById('comparison-results').innerHTML = '<p class="text-center">Select vehicles above to start comparing.</p>';
+        }
+    </script>
+</body>
+</html>
