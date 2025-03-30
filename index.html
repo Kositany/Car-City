@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-     <!--Preloader-->
+    <!--Preloader-->
     <div id="preloader">
         <div class="vivarium-info">
         <h5 class="powered-by">POWERED BY</h5>
@@ -25,10 +25,12 @@
             <div class="nav-contact">
                 <nav class="nav-links">
                     <a href="index.html" class="active">Home</a>
-                    <a href="featured.html">Featured Vehicles</a>
+                    <a href="featured.html">Vehicles</a>
+                    <a href="comparison.html">Compare</a>
+                    <!--<a href="#contact">About</a>-->
                 </nav>
                 <a href="tel:+254204401407" class="contact-btn">
-                    <i class="fas fa-phone"></i> +254 204 401 407
+                    <i class="fas fa-phone"></i>
                 </a>
             </div>
         </div>
@@ -56,7 +58,7 @@
         <div class="featured-container">
             <div class="car-card" onclick="toggleDetails">
                 <div class="car-image">
-                    <img src="https://kositany.github.io/Car-City/prado%20tx.jpg" alt="Toyota Prado TX">
+                    <img src="prado tx.jpg" alt="Toyota Prado TX">
                     <div class="car-overlay">
                         <h3>Toyota Prado TX</h3>
                         <p>Luxury SUV combining comfort and capability</p>
@@ -76,7 +78,7 @@
             
             <div class="car-card" onclick="toggleDetails">
                 <div class="car-image">
-                    <img src="https://kositany.github.io/Car-City/truckhawk.jpg" alt="Jeep Trackhawk">
+                    <img src="truckhawk.jpg" alt="Jeep Trackhawk">
                     <div class="car-overlay">
                         <h3>Jeep Trackhawk</h3>
                         <p>High-performance SUV with unmatched power</p>
@@ -122,9 +124,7 @@
         <div class="contact-grid">
             <div class="business-contact">
                 <h3>Car City Limited</h3>
-                <a href="https://maps.app.goo.gl/J9K49qme48fAgDSq6" target="blank">
                 <p>Kindaruma rd, opposite Silver Harbour apartments</p>
-                </a>
                 <p>P.O.Box 18191 - 00100</p>
                 <p>Nairobi, Kenya</p>
                 <p><a href="tel:+254204401407">+254 204 401 407</a></p>
@@ -173,13 +173,15 @@
             details.classList.toggle("active");
         }
     </script>
+
     <script>
         var loader = document.getElementById("preloader");
 
         window.addEventListener("load",function(){
             setTimeout(function(){
-            loader.style.display="none";}, 3500);
+            loader.style.display="none";}, 3400);
         });
     </script>
+
 </body>
 </html>
